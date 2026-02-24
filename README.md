@@ -47,11 +47,18 @@ The system relies on a normalized relational database with 9 interconnected enti
 ## 🖼️ User Interface Showcase
 *The application features a modular, tab-based interface for easy navigation between modules.*
 ### Main Dashboard & ERD
-![Main Dashboard](./screenshots/main_dashboard.png)
+![Authentification page](screenshots/authentificaion_page.png)
 ![Database Schema](screenshots/erd_diagram.jpg)
 
 ### Sales & Inventory Management
 ![Sales Module](./screenshots/sales_module.png)
+
+---
+
+## 📄 Documentation
+Detailed technical reports regarding the software architecture and database design can be found in the [docs](./docs/) folder:
+- [Technical Report (Java/OOP)](./docs/Technical_Documentation.pdf)
+- [Database Design & Normalization](./docs/Database_Design_Report.pdf)
 
 ---
 
@@ -61,10 +68,6 @@ The system relies on a normalized relational database with 9 interconnected enti
 - **Apache Maven**.
 - **Microsoft SQL Server**.
 
-## 📄 Documentation
-Detailed technical reports regarding the software architecture and database design can be found in the [docs](./docs/) folder:
-- [Technical Report (Java/OOP)](./docs/Technical_Documentation.pdf)
-- [Database Design & Normalization](./docs/Database_Design_Report.pdf)
 
 ### Database Initialization
 1. Create a new database in SQL Server (e.g., `gestionare_reprezentanta_auto`).
