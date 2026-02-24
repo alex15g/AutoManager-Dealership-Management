@@ -57,7 +57,7 @@ The system relies on a normalized relational database with 9 interconnected enti
 
 ## 📄 Documentation
 Detailed technical reports regarding the software architecture and database design can be found in the [docs](./docs/) folder:
-- [Technical Report (Java/OOP)](./docs/Technical_Documentation.pdf)
+- [Technical Report (Java/OOP)](docs/documentation_AutoManager.pdf)
 - [Database Design & Normalization](docs/Documentation_reprezentanta_auto_sql.pdf)
 
 ---
