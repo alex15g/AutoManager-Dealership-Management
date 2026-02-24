@@ -41,6 +41,8 @@ The system relies on a normalized relational database with 9 interconnected enti
 - **Service Books & Inspections**: Comprehensive history of technical interventions.
 - **Sales**: Secure records of all successful dealership transactions.
 
+- screenshots/erd_diagram.jpg
+
 ---
 
 ## 🖼️ User Interface Showcase
