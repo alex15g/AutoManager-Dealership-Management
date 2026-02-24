@@ -48,7 +48,7 @@ The system relies on a normalized relational database with 9 interconnected enti
 *The application features a modular, tab-based interface for easy navigation between modules.*
 ### Main Dashboard & ERD
 ![Main Dashboard](./screenshots/main_dashboard.png)
-![Database Schema](./screenshots/database_schema.png)
+![Database Schema](screenshots/erd_diagram.jpg)
 
 ### Sales & Inventory Management
 ![Sales Module](./screenshots/sales_module.png)
@@ -61,6 +61,11 @@ The system relies on a normalized relational database with 9 interconnected enti
 - **Apache Maven**.
 - **Microsoft SQL Server**.
 
+## 📄 Documentation
+Detailed technical reports regarding the software architecture and database design can be found in the [docs](./docs/) folder:
+- [Technical Report (Java/OOP)](./docs/Technical_Documentation.pdf)
+- [Database Design & Normalization](./docs/Database_Design_Report.pdf)
+
 ### Database Initialization
 1. Create a new database in SQL Server (e.g., `gestionare_reprezentanta_auto`).
 2. Execute the provided SQL script found in the `/sql` directory to generate tables and constraints.
@@ -71,7 +76,5 @@ Update the `DBConnection.java` file with your SQL Server credentials:
 // Example JDBC Connection string
 String url = "jdbc:sqlserver://localhost:1433;databaseName=gestionare_reprezentanta_auto;";
 
-## 📄 Documentation
-Detailed technical reports regarding the software architecture and database design can be found in the [docs](./docs/) folder:
-- [Technical Report (Java/OOP)](./docs/Technical_Documentation.pdf)
-- [Database Design & Normalization](./docs/Database_Design_Report.pdf)
+
+
