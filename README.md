@@ -13,51 +13,51 @@ The project emphasizes **Data Integrity**, **Object-Oriented Programming (OOP)**
 ---
 
 ## 🚀 Key Features
-- [cite_start]**Comprehensive CRUD Operations**: Manage Clients, Vehicles, Employees, Services, and Sales[cite: 511].
-- [cite_start]**Functional Interconnectivity**: Transactions link clients, cars, and employees seamlessly[cite: 512].
-- [cite_start]**Service & Maintenance Tracking**: Digital service book for each vehicle with automated cost calculation and mileage validation[cite: 530, 532, 533].
-- [cite_start]**Role-Based Access Control (RBAC)**: Distinct permissions for `ADMIN` and `EMPLOYEE` roles to ensure data security[cite: 545, 613].
-- [cite_start]**Relational Data Integrity**: Strict database constraints (Foreign Keys) prevent accidental deletion of critical transaction data[cite: 598, 601].
-- [cite_start]**Error Handling & User Feedback**: Graceful handling of SQL exceptions and intuitive UI messages[cite: 618, 627].
+- **Comprehensive CRUD Operations**: Manage Clients, Vehicles, Employees, Services, and Sales.
+- **Functional Interconnectivity**: Transactions link clients, cars, and employees seamlessly.
+- **Service & Maintenance Tracking**: Digital service book for each vehicle with automated cost calculation and mileage validation.
+- **Role-Based Access Control (RBAC)**: Distinct permissions for `ADMIN` and `EMPLOYEE` roles to ensure data security.
+- **Relational Data Integrity**: Strict database constraints (Foreign Keys) prevent accidental deletion of critical transaction data.
+- **Error Handling & User Feedback**: Graceful handling of SQL exceptions and intuitive UI messages.
 
 ---
 
 ## 🛠️ Tech Stack
 | Component | Technology |
 | :--- | :--- |
-| **Language** | [cite_start]Java 17 [cite: 553] |
-| **GUI Framework** | [cite_start]JavaFX [cite: 553] |
-| **Database** | [cite_start]Microsoft SQL Server [cite: 553] |
-| **Data Access** | [cite_start]JDBC (Java Database Connectivity) [cite: 553] |
-| **Build Tool** | [cite_start]Apache Maven [cite: 553] |
-| **Architecture** | [cite_start]MVC Pattern with DAO (Data Access Object) [cite: 553, 562] |
+| **Language** | Java 17  |
+| **GUI Framework** | JavaFX  |
+| **Database** | Microsoft SQL Server  |
+| **Data Access** | JDBC (Java Database Connectivity)  |
+| **Build Tool** | Apache Maven  |
+| **Architecture** | MVC Pattern with DAO (Data Access Object)  |
 
 ---
 
 ## 📊 Database Schema
 The system relies on a normalized relational database with 9 interconnected entities:
-- [cite_start]**Customers & Employees**: Personal and professional contact details[cite: 583, 584].
-- [cite_start]**Vehicles & Options**: Multi-vehicle management with N-N relationship for equipment options[cite: 585, 589, 590].
-- [cite_start]**Service Books & Inspections**: Comprehensive history of technical interventions[cite: 587, 588].
-- [cite_start]**Sales**: Secure records of all successful dealership transactions[cite: 586].
+- **Customers & Employees**: Personal and professional contact details.
+- **Vehicles & Options**: Multi-vehicle management with N-N relationship for equipment options.
+- **Service Books & Inspections**: Comprehensive history of technical interventions.
+- **Sales**: Secure records of all successful dealership transactions.
 
 ---
 
 ## 🖼️ User Interface Showcase
-[cite_start]*The application features a modular, tab-based interface for easy navigation between modules[cite: 631, 632].*
+*The application features a modular, tab-based interface for easy navigation between modules.*
 
 
 ---
 
 ## ⚙️ Installation & Setup
 ### Prerequisites
-- [cite_start]**JDK 17** or higher[cite: 415].
-- [cite_start]**Apache Maven**[cite: 416].
-- [cite_start]**Microsoft SQL Server**[cite: 417].
+- **JDK 17** or higher.
+- **Apache Maven**.
+- **Microsoft SQL Server**.
 
 ### Database Initialization
-1. [cite_start]Create a new database in SQL Server (e.g., `gestionare_reprezentanta_auto`)[cite: 420].
-2. [cite_start]Execute the provided SQL script found in the `/sql` directory to generate tables and constraints[cite: 421].
+1. Create a new database in SQL Server (e.g., `gestionare_reprezentanta_auto`).
+2. Execute the provided SQL script found in the `/sql` directory to generate tables and constraints.
 
 ### Configuration
 Update the `DBConnection.java` file with your SQL Server credentials:
