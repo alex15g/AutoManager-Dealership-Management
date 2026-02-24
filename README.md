@@ -46,7 +46,12 @@ The system relies on a normalized relational database with 9 interconnected enti
 
 ## 🖼️ User Interface Showcase
 *The application features a modular, tab-based interface for easy navigation between modules.*
+### Main Dashboard & ERD
+![Main Dashboard](./screenshots/main_dashboard.png)
+![Database Schema](./screenshots/database_schema.png)
 
+### Sales & Inventory Management
+![Sales Module](./screenshots/sales_module.png)
 
 ---
 
@@ -65,3 +70,8 @@ Update the `DBConnection.java` file with your SQL Server credentials:
 ```java
 // Example JDBC Connection string
 String url = "jdbc:sqlserver://localhost:1433;databaseName=gestionare_reprezentanta_auto;";
+
+## 📄 Documentation
+Detailed technical reports regarding the software architecture and database design can be found in the [docs](./docs/) folder:
+- [Technical Report (Java/OOP)](./docs/Technical_Documentation.pdf)
+- [Database Design & Normalization](./docs/Database_Design_Report.pdf)
