@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ro.utcn.reprezentanta.ui.MainController">
+
+    <!-- BARA DE SUS -->
+    <top>
+        <HBox spacing="15"
+              alignment="CENTER_LEFT"
+              style="-fx-padding: 10; -fx-background-color: #eeeeee;">
+
+            <Label fx:id="lblUser"
+                   text="👤 Logat ca: -"
+                   style="-fx-font-weight: bold;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button text="Logout"
+                    onAction="#handleLogout"/>
+        </HBox>
+
+    </top>
+
+    <center>
+<TabPane >
+
+    <tabs>
+
+        <!-- TAB CLIENTI -->
+        <Tab text="Clienți">
+            <BorderPane>
+                <top>
+                    <HBox spacing="10" style="-fx-padding: 10;">
+                        <TextField fx:id="tfNume" promptText="Nume"/>
+                        <TextField fx:id="tfPrenume" promptText="Prenume"/>
+                        <TextField fx:id="tfTelefon" promptText="Telefon"/>
+                        <TextField fx:id="tfEmail" promptText="Email"/>
+
+                        <Button text="Adaugă" onAction="#handleAddClient"/>
+                        <Button text="Șterge" onAction="#handleDeleteClient"/>
+                        <Button text="Modifică" onAction="#handleUpdateClient"/>
+                        <Button text="Refresh" onAction="#handleRefresh"/>
+                    </HBox>
+                </top>
+
+                <center>
+                    <TableView fx:id="clientTable">
+                        <columns>
+                            <TableColumn fx:id="colId" text="ID"/>
+                            <TableColumn fx:id="colNume" text="Nume"/>
+                            <TableColumn fx:id="colPrenume" text="Prenume"/>
+                            <TableColumn fx:id="colTelefon" text="Telefon"/>
+                            <TableColumn fx:id="colEmail" text="Email"/>
+                        </columns>
+                    </TableView>
+                </center>
+            </BorderPane>
+        </Tab>
+
+        <Tab text="Angajați">
+            <BorderPane>
+
+                <top>
+                    <HBox spacing="10" style="-fx-padding: 10;">
+                        <TextField fx:id="tfAngNume" promptText="Nume"/>
+                        <TextField fx:id="tfAngPrenume" promptText="Prenume"/>
+                        <TextField fx:id="tfAngFunctie" promptText="Funcție"/>
+                        <TextField fx:id="tfAngEmail" promptText="Email"/>
+                        <TextField fx:id="tfAngSalariu" promptText="Salariu"/>
+
+                        <Button text="Adaugă" onAction="#handleAddAngajat"/>
+                        <Button text="Șterge" onAction="#handleDeleteAngajat"/>
+                        <Button text="Modifică" onAction="#handleUpdateAngajat"/>
+                    </HBox>
+                </top>
+
+                <center>
+                    <TableView fx:id="angajatTable">
+                        <columns>
+                            <TableColumn fx:id="colAngId" text="ID"/>
+                            <TableColumn fx:id="colAngNume" text="Nume"/>
+                            <TableColumn fx:id="colAngPrenume" text="Prenume"/>
+                            <TableColumn fx:id="colAngFunctie" text="Funcție"/>
+                            <TableColumn fx:id="colAngEmail" text="Email"/>
+                            <TableColumn fx:id="colAngSalariu" text="Salariu"/>
+                        </columns>
+                    </TableView>
+                </center>
+
+            </BorderPane>
+        </Tab>
+
+
+        <!-- TAB MASINI -->
+        <Tab text="Mașini">
+            <ScrollPane
+                    fitToWidth="true"
+                    fitToHeight="true"
+                    pannable="true">
+
+            <content>
+
+            <BorderPane prefWidth="1200" prefHeight="800">
+
+
+                <!-- FORMULAR -->
+                <top>
+                    <HBox spacing="10" style="-fx-padding: 10;">
+                        <TextField fx:id="tfMarca" promptText="Marca"/>
+                        <TextField fx:id="tfModel" promptText="Model"/>
+                        <TextField fx:id="tfAn" promptText="An"/>
+                        <TextField fx:id="tfPret" promptText="Preț"/>
+
+                        <Button text="Adaugă mașină" onAction="#handleAddMasina"/>
+                        <Button text="Șterge" onAction="#handleDeleteMasina"/>
+                        <Button text="Modifică" onAction="#handleUpdateMasina"/>
+
+
+                    </HBox>
+                </top>
+
+                <!-- TABEL -->
+                <center>
+                    <HBox spacing="20" style="-fx-padding: 10;">
+
+                        <!-- TABEL MASINI -->
+                        <TableView fx:id="masinaTable" prefWidth="500">
+                            <columns>
+                                <TableColumn fx:id="colMasinaId" text="ID"/>
+                                <TableColumn fx:id="colMarca" text="Marca"/>
+                                <TableColumn fx:id="colModel" text="Model"/>
+                                <TableColumn fx:id="colAn" text="An"/>
+                                <TableColumn fx:id="colPret" text="Preț"/>
+                            </columns>
+                        </TableView>
+
+
+                        <!-- DETALII CARTE SERVICE + REVIZII -->
+                        <VBox spacing="10">
+
+                            <!-- CARTE SERVICE -->
+                            <Label text="Carte Service" style="-fx-font-size: 16px;"/>
+
+                            <Label fx:id="lblCarteId" text="ID: -" />
+                            <Label fx:id="lblKmInitiali" text="KM inițiali: -" />
+                            <Label fx:id="lblUltimaRevizie" text="Ultima revizie: -" />
+                            <Label fx:id="lblExpirareGarantie" text="Expirare garanție: -" />
+
+                            <Button fx:id="btnCreateCarte"
+                                    text="Creează carte service"
+                                    onAction="#handleCreateCarteService"/>
+
+                            <Separator/>
+
+                            <!-- REVIZII -->
+                            <Label text="Revizii" style="-fx-font-size: 16px;"/>
+
+                            <TableView fx:id="revizieTable"
+                                       prefWidth="550"
+                                       prefHeight="220">
+                            <columns>
+                                    <TableColumn fx:id="colRevizieId" text="ID"/>
+                                    <TableColumn fx:id="colDataRevizie" text="Data"/>
+                                    <TableColumn fx:id="colKm" text="KM"/>
+                                    <TableColumn fx:id="colDescriere" text="Descriere"/>
+                                    <TableColumn fx:id="colCost" text="Cost"/>
+                                </columns>
+                            </TableView>
+
+                            <HBox spacing="10">
+                                <Button text="Adaugă revizie"
+                                        onAction="#handleAddRevizie"/>
+
+                                <Button fx:id="btnDeleteRevizie"
+                                        text="Șterge revizie"
+                                        onAction="#handleDeleteRevizie"/>
+
+                                <Button fx:id="btnUpdateRevizie"
+                                        text="Modifică revizie"
+                                        onAction="#handleUpdateRevizie"/>
+
+                            </HBox>
+
+                            <Separator/>
+
+                            <Label text="Cost total revizii:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+                            <Label fx:id="lblCostTotalRevizii" text="0.00 lei"/>
+
+
+                        </VBox>
+
+
+                    </HBox>
+                </center>
+
+
+
+            </BorderPane>
+
+            </content>
+
+        </ScrollPane>
+        </Tab>
+
+        <Tab text="Vânzări">
+            <BorderPane>
+                <top>
+                    <HBox spacing="10" style="-fx-padding: 10;">
+                        <ComboBox fx:id="cbClient" promptText="Client"/>
+                        <ComboBox fx:id="cbMasina" promptText="Mașină"/>
+                        <ComboBox fx:id="cbAngajat" promptText="Angajat"/>
+                        <TextField fx:id="tfPretFinal" promptText="Preț final"/>
+                        <Button text="Finalizează" onAction="#handleAddVanzare"/>
+                    </HBox>
+                </top>
+
+                <center>
+                    <TableView fx:id="vanzareTable">
+                        <columns>
+                            <TableColumn fx:id="colVId" text="ID"/>
+                            <TableColumn fx:id="colVData" text="Data"/>
+                            <TableColumn fx:id="colVClient" text="Client"/>
+                            <TableColumn fx:id="colVMasina" text="Mașină"/>
+                            <TableColumn fx:id="colVAngajat" text="Angajat"/>
+                            <TableColumn fx:id="colVPret" text="Preț"/>
+                        </columns>
+                    </TableView>
+                </center>
+            </BorderPane>
+        </Tab>
+
+
+
+    </tabs>
+</TabPane>
+    </center>
+</BorderPane>
+
