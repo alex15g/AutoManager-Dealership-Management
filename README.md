@@ -51,7 +51,7 @@ The system relies on a normalized relational database with 9 interconnected enti
 ![Database Schema](screenshots/erd_diagram.jpg)
 
 ### Sales & Inventory Management
-![Sales Module](./screenshots/sales_module.png)
+![User Interface](screenshots/user_interface.png)
 
 ---
 
